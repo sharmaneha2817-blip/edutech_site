@@ -1,0 +1,17 @@
+<!doctype html><html lang='en'><head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0f172a">
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- Firebase (placeholder - replace config) -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+<!-- GA4 placeholder -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+<title>Dashboard — LearnHub</title></head><body class='bg-slate-50 text-slate-800'><main class='max-w-4xl mx-auto p-6'><h1 id='title' class='text-2xl font-bold'>Dashboard</h1><div id='content' class='mt-4'></div><div id='authLinks' class='mt-6'><a href='/login.html' class='text-indigo-600'>Sign in</a></div></main><script>var firebaseConfig = { apiKey: 'REPLACE', authDomain: 'REPLACE', projectId: 'REPLACE' };firebase.initializeApp(firebaseConfig);const auth=firebase.auth();auth.onAuthStateChanged(user=>{if(user){document.getElementById('content').innerHTML=`<p>Welcome ${'${user.email}'}</p><h3 class="mt-4 font-semibold">Your enrolled courses</h3><ul class="list-disc ml-6"><li>Python for Beginners</li><li>Data Science 101</li></ul><button id='signout' class='mt-4 bg-red-600 text-white px-3 py-2 rounded'>Sign out</button>`;document.getElementById('authLinks').innerHTML='';document.getElementById('signout').addEventListener('click',()=>auth.signOut().then(()=>location='/'));}else{location='/login.html'}});</script></body></html>

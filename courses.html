@@ -1,62 +1,21 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Courses — LearnHub</title>
-  <meta name="description" content="Explore LearnHub courses: Python, Data Science, Web Development and more." />
-  <link rel="canonical" href="https://example.com/courses.html" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": [
-      {"@type":"ListItem","position":1,"item":{"@type":"Course","name":"Python for Beginners","description":"Beginner friendly Python course"}},
-      {"@type":"ListItem","position":2,"item":{"@type":"Course","name":"Data Science 101","description":"Intro to data analysis and ML"}},
-      {"@type":"ListItem","position":3,"item":{"@type":"Course","name":"Web Dev Bootcamp","description":"Full stack web development"}} 
-    ]
-  }
-  </script>
-</head>
-<body class="bg-slate-50 text-slate-800">
-  <header class="bg-white shadow">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-3"><img src="/assets/logo.png" class="w-10 h-10"/><span class="font-bold">LearnHub</span></a>
-      <nav class="hidden md:block space-x-4">
-        <a href="/" class="text-slate-700">Home</a>
-        <a href="/courses.html" class="text-slate-900 font-semibold">Courses</a>
-        <a href="/about.html" class="text-slate-700">About</a>
-        <a href="/contact.html" class="text-slate-700">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-4 py-12">
-    <h1 class="text-3xl font-bold mb-4" data-aos="fade-up">Courses</h1>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-white p-6 rounded shadow" data-aos="fade-up">
-        <h3 class="font-semibold text-lg">Python for Beginners</h3>
-        <p class="text-slate-600">Start with basics and build real projects.</p>
-        <a href="/contact.html" class="inline-block mt-4 text-indigo-600">Enroll</a>
-      </div>
-      <div class="bg-white p-6 rounded shadow" data-aos="fade-up" data-aos-delay="80">
-        <h3 class="font-semibold text-lg">Data Science 101</h3>
-        <p class="text-slate-600">Intro to statistics, ML and data viz.</p>
-        <a href="/contact.html" class="inline-block mt-4 text-indigo-600">Enroll</a>
-      </div>
-      <div class="bg-white p-6 rounded shadow" data-aos="fade-up" data-aos-delay="160">
-        <h3 class="font-semibold text-lg">Web Development Bootcamp</h3>
-        <p class="text-slate-600">HTML, CSS, JS and modern frameworks.</p>
-        <a href="/contact.html" class="inline-block mt-4 text-indigo-600">Enroll</a>
-      </div>
-    </div>
-  </main>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init({once:true,duration:700});</script>
-</body>
-</html>
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0f172a">
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- Firebase (placeholder - replace config) -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+<!-- GA4 placeholder -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+<title>Courses — LearnHub</title><meta name="description" content="Explore LearnHub courses." /></head><body class="bg-slate-50 text-slate-800">
+<header class="bg-white shadow"><div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between"><a href='/' class='flex items-center gap-3'><img src='/assets/logo.png' class='w-10 h-10'/><span class='font-bold'>LearnHub</span></a><nav class='hidden md:flex gap-4'><a href='/' class=''>Home</a><a href='/courses.html' class='font-semibold'>Courses</a><a href='/blog.html'>Blog</a><a href='/about.html'>About</a></nav><div><a href='/login.html' class='px-3 py-2 bg-indigo-600 text-white rounded'>Sign in</a></div></div></header>
+<main class='max-w-6xl mx-auto p-6'><h1 class='text-3xl font-bold mb-4'>Courses</h1><div id='courseList' class='grid md:grid-cols-3 gap-6'></div></main>
+<footer class='bg-slate-900 text-slate-200 py-6'><div class='max-w-6xl mx-auto px-4 text-sm'>©2025 LearnHub</div></footer>
+<script>const courses=[{id:'python-beg',title:'Python for Beginners',desc:'Practical Python projects.'},{id:'data-101',title:'Data Science 101',desc:'Intro to ML.'},{id:'web-boot',title:'Web Development Bootcamp',desc:'Modern JS frameworks.'}];const list=document.getElementById('courseList');courses.forEach(c=>{const el=document.createElement('div');el.className='bg-white p-6 rounded shadow';el.innerHTML=`<h3 class="font-semibold text-lg"><a href="/courses/${c.id}.html">${c.title}</a></h3><p class="text-slate-600 mt-2">${c.desc}</p><div class="mt-4"><a href="/courses/${c.id}.html" class="text-indigo-600">View details</a></div>`;list.appendChild(el);});</script></body></html>

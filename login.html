@@ -1,0 +1,17 @@
+<!doctype html><html lang='en'><head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0f172a">
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- Firebase (placeholder - replace config) -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+<!-- GA4 placeholder -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+<title>Login — LearnHub</title></head><body class='bg-slate-50 text-slate-800'><main class='max-w-md mx-auto p-6'><h1 class='text-2xl font-bold'>Sign in</h1><form id='loginForm' class='grid gap-4 bg-white p-6 rounded shadow'><input id='email' placeholder='Email' class='p-2 border'/><input id='password' type='password' placeholder='Password' class='p-2 border'/><button id='btn' class='bg-indigo-600 text-white p-2 rounded'>Sign in</button><p class='text-sm'>No account? <a href='/signup.html' class='text-indigo-600'>Sign up</a></p></form><div id='err' class='text-red-600 mt-2'></div></main><script>var firebaseConfig = { apiKey: 'REPLACE', authDomain: 'REPLACE', projectId: 'REPLACE' };firebase.initializeApp(firebaseConfig);const auth = firebase.auth();document.getElementById('loginForm').addEventListener('submit', async (e)=>{e.preventDefault();try{await auth.signInWithEmailAndPassword(document.getElementById('email').value, document.getElementById('password').value);window.location='/dashboard.html';}catch(err){document.getElementById('err').innerText=err.message}});</script></body></html>
