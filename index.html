@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LearnHub — Modern EdTech Platform</title>
+  <meta name="description" content="LearnHub - Online courses, career-focused learning paths, and hands-on projects." />
+  <meta name="keywords" content="learn, edtech, online courses, data science, web development, python" />
+  <link rel="canonical" href="https://example.com/" />
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#0f172a">
+  <!-- Open Graph -->
+  <meta property="og:title" content="LearnHub — Modern EdTech Platform" />
+  <meta property="og:description" content="Grow your skills with high-quality online courses and certifications." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/" />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- GA4 placeholder -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "LearnHub",
+    "url": "https://example.com/",
+    "logo": "https://example.com/assets/logo.png",
+    "sameAs": ["https://www.linkedin.com/company/example","https://twitter.com/example"]
+  }
+  </script>
+  <style>
+    /* Small custom styles */
+    .hero-bg{ background: linear-gradient(135deg,#0ea5a4 0%, #6366f1 100%); }
+  </style>
+</head>
+<body class="antialiased text-slate-800 bg-slate-50">
+  <header class="bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3">
+        <img src="/assets/logo.png" alt="LearnHub" class="w-10 h-10 rounded-md">
+        <span class="text-xl font-bold">LearnHub</span>
+      </a>
+      <nav class="space-x-4 text-sm hidden md:block">
+        <a href="/" class="text-slate-700 hover:text-slate-900">Home</a>
+        <a href="/courses.html" class="text-slate-700 hover:text-slate-900">Courses</a>
+        <a href="/about.html" class="text-slate-700 hover:text-slate-900">About</a>
+        <a href="/contact.html" class="text-slate-700 hover:text-slate-900">Contact</a>
+      </nav>
+      <div>
+        <a href="/courses.html" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded-md text-sm hover:bg-indigo-700">Explore Courses</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-bg text-white py-20">
+      <div class="max-w-4xl mx-auto px-4 text-center" data-aos="fade-up">
+        <h1 class="text-4xl md:text-5xl font-extrabold">Upgrade your skills with LearnHub</h1>
+        <p class="mt-4 text-lg text-indigo-100">Practical courses, hands-on projects, and career-ready programs.</p>
+        <a href="/courses.html" class="mt-8 inline-block bg-white text-indigo-700 px-6 py-3 rounded-md font-semibold shadow">Browse Courses</a>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 py-12">
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="bg-white p-6 rounded-lg shadow" data-aos="fade-right">
+          <h3 class="text-xl font-semibold mb-2">Featured Course: Python for Beginners</h3>
+          <p class="text-slate-600">Start from scratch and build real-world Python projects.</p>
+        </article>
+        <article class="bg-white p-6 rounded-lg shadow" data-aos="fade-up">
+          <h3 class="text-xl font-semibold mb-2">Data Science 101</h3>
+          <p class="text-slate-600">Learn data analysis, visualization, and introductory ML.</p>
+        </article>
+        <article class="bg-white p-6 rounded-lg shadow" data-aos="fade-left">
+          <h3 class="text-xl font-semibold mb-2">Web Dev Bootcamp</h3>
+          <p class="text-slate-600">HTML, CSS, JavaScript and modern frameworks for full-stack devs.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="bg-white py-12">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-2xl font-bold mb-6" data-aos="fade-up">Why LearnHub?</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="p-6 bg-slate-50 rounded shadow" data-aos="zoom-in">
+            <h4 class="font-semibold">Career-Focused</h4>
+            <p class="text-slate-600">Courses co-created with industry experts.</p>
+          </div>
+          <div class="p-6 bg-slate-50 rounded shadow" data-aos="zoom-in" data-aos-delay="100">
+            <h4 class="font-semibold">Hands-On Projects</h4>
+            <p class="text-slate-600">Build portfolio-ready projects as you learn.</p>
+          </div>
+          <div class="p-6 bg-slate-50 rounded shadow" data-aos="zoom-in" data-aos-delay="200">
+            <h4 class="font-semibold">Certification</h4>
+            <p class="text-slate-600">Earn certificates to showcase your skills.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-4 py-12">
+      <h2 class="text-2xl font-bold mb-6" data-aos="fade-up">Student Stories</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <blockquote class="bg-white p-6 rounded shadow" data-aos="fade-right">
+          <p class="text-slate-700">"LearnHub helped me transition into a data engineering role."</p>
+          <cite class="block mt-3 text-sm text-slate-500">— A. Student</cite>
+        </blockquote>
+        <blockquote class="bg-white p-6 rounded shadow" data-aos="fade-left">
+          <p class="text-slate-700">"The projects were practical and interview-focused."</p>
+          <cite class="block mt-3 text-sm text-slate-500">— B. Learner</cite>
+        </blockquote>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-900 text-slate-200 py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-sm">© 2025 LearnHub — All rights reserved</p>
+      <nav class="space-x-4 mt-4 md:mt-0">
+        <a href="/privacy.html" class="text-slate-300 hover:text-white text-sm">Privacy</a>
+        <a href="/terms.html" class="text-slate-300 hover:text-white text-sm">Terms</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 700 });
+  </script>
+</body>
+</html>
